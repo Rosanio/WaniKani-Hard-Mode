@@ -1,0 +1,20 @@
+{
+  "manifest_version": 2,
+
+  "name": "WaniKani Hard Mode",
+  "description": "This extension will hide english versions of the sentences on WaniKani vocab lesson pages. They will be replaced with a link, which will display the sentences when clicked.",
+  "version": "1.0",
+
+  "browser_action": {
+   "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.wanikani.com/lesson/session"],
+      "js": ["jquery-3.2.1.js", "content.js"]
+    }
+  ],
+  "permissions": [
+   "activeTab"
+   ]
+}
